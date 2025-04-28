@@ -4,41 +4,23 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!--
-    父POM - 项目聚合器
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.4.5</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
 
-    职责：
-    - 作为项目的聚合器，管理所有子模块
-    - 提供通用的构建配置和插件管理
-    - 导入BOM模块，实现依赖版本的统一管理
-
-    架构位置：
-    - 导入BOM模块的依赖管理
-    - 被module1和module2继承，为它们提供通用配置
-    - 不包含业务逻辑，仅提供构建和配置支持
-    -->
     <!-- 项目基本信息 -->
-    <groupId>com.helian</groupId>
-    <artifactId>bom-example-project</artifactId>
-    <version>${revision}</version>
-    <packaging>pom</packaging>
-
-    <name>Project Top Level</name>
-    <description>Maven多模块项目，使用BOM进行依赖版本管理</description>
-    <url>https://github.com/helian-labs/maven-template-bom</url>
-
-    <!-- 项目模块 -->
-    <modules>
-        <module>bom</module>
-        <module>module1</module>
-        <module>module2</module>
-    </modules>
+  <groupId>com.example</groupId>
+  <artifactId>demo</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>demo</name>
+  <description>Demo project for Spring Boot</description>
+    <url>https://github.com/helian-labs/spring-boot-template-mvc</url>
 
     <!-- 项目属性 -->
     <properties>
-        <!-- 版本管理 - 使用单一变量控制所有模块版本 -->
-        <revision>1.0.0-SNAPSHOT</revision>
-
         <!-- 基础配置 -->
         <java.version>17</java.version>
         <maven.min.version>3.6.3</maven.min.version>
@@ -64,6 +46,19 @@
         <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
         <flatten-maven-plugin.version>1.7.0</flatten-maven-plugin.version>
     </properties>
+
+      <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 
     <!-- 依赖管理 - 控制整个项目的依赖版本 -->
     <dependencyManagement>
@@ -377,6 +372,10 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
