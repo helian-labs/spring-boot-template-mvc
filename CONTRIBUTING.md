@@ -1,6 +1,6 @@
 # 贡献指南
 
-感谢您考虑为Maven BOM模板项目做出贡献！以下是参与本项目的指导原则。
+感谢您考虑为 Spring Boot MVC 模板项目做出贡献！以下是参与本项目的指导原则。
 
 ## 行为准则
 
@@ -88,7 +88,7 @@
 ## 设置开发环境
 
 1. **先决条件**: 安装兼容版本的JDK和Maven
-2. **克隆仓库**: `git clone https://github.com/YOUR_USERNAME/maven-template-bom.git`
+2. **克隆仓库**: `git clone https://github.com/YOUR_USERNAME/spring-boot-template-mvc.git`
 3. **构建项目**: 运行`./mvnw clean install`确保构建成功
 
 ## 报告问题

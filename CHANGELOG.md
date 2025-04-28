@@ -98,7 +98,7 @@
 <!-- 列出此版本的安全相关变更 -->
 - 安全修复A的描述
 
-## [1.0.0] - 2025-04-09
+## [1.0.0] - 2025-04-29
 <!-- 首个正式发布版本 -->
 
 ### 版本说明
@@ -108,9 +108,6 @@
 ### 新增
 
 - 初始项目结构
-- BOM 模块用于版本管理
-- Module1 提供基础功能组件
-- Module2 展示模块间依赖使用
 
 ### 修复
 
@@ -124,6 +121,6 @@
 设置版本比较链接
 以下链接将指向实际项目的代码库，方便查看各版本之间的变更
 -->
-[未发布]: https://github.com/helian-labs/maven-template-bom/compare/v1.0.0...HEAD
-[x.y.z]: https://github.com/helian-labs/maven-template-bom/compare/v1.0.0...vx.y.z
-[1.0.0]: https://github.com/helian-labs/maven-template-bom/releases/tag/v1.0.0
+[未发布]: https://github.com/helian-labs/spring-boot-template-mvc/compare/v1.0.0...HEAD
+[x.y.z]: https://github.com/helian-labs/spring-boot-template-mvc/compare/v1.0.0...vx.y.z
+[1.0.0]: https://github.com/helian-labs/spring-boot-template-mvc/releases/tag/v1.0.0

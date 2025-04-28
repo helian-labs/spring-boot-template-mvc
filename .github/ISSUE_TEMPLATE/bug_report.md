@@ -17,7 +17,7 @@ assignees: ''
 
 - 操作系统：[例如：CentOS 8.4.2105 4核3.10GHz 16GB]
 - JDK版本：[例如：OpenJDK 1.8.0_312]
-- 项目版本：[例如：maven-template-bom 1.x.x]
+- 项目版本：[例如：spring-boot-template-mvc 1.x.x]
 - Maven版本：[例如：Apache Maven 3.8.6]
 
 ### 重现步骤

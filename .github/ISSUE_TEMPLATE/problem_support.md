@@ -17,7 +17,7 @@ assignees: ''
 
 - 操作系统：[例如：Ubuntu 20.04]
 - JDK版本：[例如：OpenJDK 11.0.12]
-- 项目版本：[例如：maven-template-bom 1.x.x]
+- 项目版本：[例如：spring-boot-template-mvc 1.x.x]
 
 ### 已尝试的方法
 
