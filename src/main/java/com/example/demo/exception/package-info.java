@@ -1,7 +1,21 @@
 /**
  * 异常处理包
  *
- * <p>最佳实践： 1. 异常类应该以Exception结尾 2. 异常类应该继承RuntimeException 3. 异常类应该提供错误码和错误信息 4. 异常类应该提供必要的构造方法 5.
- * 异常类应该提供堆栈信息 6. 异常类应该提供必要的注释说明 7. 异常类应该考虑国际化 8. 异常类应该考虑安全性 9. 异常类应该考虑性能问题 10. 异常类应该遵循继承体系
+ * <p>职责：
+ * <ul>
+ *   <li>定义业务异常类</li>
+ *   <li>提供全局异常处理</li>
+ *   <li>统一异常响应格式</li>
+ *   <li>处理系统异常</li>
+ * </ul>
+ *
+ * <p>规范：
+ * <ul>
+ *   <li>异常类以Exception结尾</li>
+ *   <li>继承RuntimeException</li>
+ *   <li>提供异常码和消息</li>
+ *   <li>使用@ControllerAdvice处理全局异常</li>
+ *   <li>统一异常响应格式</li>
+ * </ul>
  */
 package com.example.demo.exception;

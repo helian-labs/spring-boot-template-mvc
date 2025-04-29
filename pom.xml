@@ -213,7 +213,9 @@
                         <java>
                             <importOrder/>
                             <removeUnusedImports/>
-                            <googleJavaFormat/>
+                            <googleJavaFormat>
+                                <formatJavadoc>false</formatJavadoc>
+                            </googleJavaFormat>
                             <trimTrailingWhitespace/>
                             <endWithNewline/>
                         </java>
