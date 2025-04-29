@@ -14,45 +14,46 @@
     <!-- 项目基本信息 -->
     <groupId>com.example</groupId>
     <artifactId>demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>demo</name>
     <description>Demo project for Spring Boot</description>
     <url>https://github.com/helian-labs/spring-boot-template-mvc</url>
 
     <!-- 项目属性 -->
     <properties>
+        <!-- 版本管理 - 使用单一变量控制所有模块版本 -->
+        <revision>1.0.0-SNAPSHOT</revision>
+
         <!-- 基础配置 -->
         <java.version>17</java.version>
         <maven.min.version>3.6.3</maven.min.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <!-- 依赖版本 -->
-        <junit.version>5.12.2</junit.version>
+        <!-- 依赖版本 - 注意与Spring Boot 版本保持匹配 -->
+        <spring-cloud.version>2024.0.1</spring-cloud.version>
 
         <!-- 插件版本 - 集中管理提高一致性和升级便捷性 -->
         <maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
-        <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
-        <maven-enforcer-plugin.version>3.5.0</maven-enforcer-plugin.version>
-        <maven-javadoc-plugin.version>3.11.2</maven-javadoc-plugin.version>
         <maven-pmd-plugin.version>3.26.0</maven-pmd-plugin.version>
-        <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
-        <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
         <jacoco-maven-plugin.version>0.8.13</jacoco-maven-plugin.version>
         <spotbugs-maven-plugin.version>4.9.3.0</spotbugs-maven-plugin.version>
         <spotless-maven-plugin.version>2.44.4</spotless-maven-plugin.version>
-        <versions-maven-plugin.version>2.18.0</versions-maven-plugin.version>
         <dependency-check-maven.version>12.1.1</dependency-check-maven.version>
-        <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
         <flatten-maven-plugin.version>1.7.0</flatten-maven-plugin.version>
     </properties>
 
+    <!-- 依赖配置 -->
     <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -63,11 +64,11 @@
     <!-- 依赖管理 - 控制整个项目的依赖版本 -->
     <dependencyManagement>
         <dependencies>
-            <!-- 导入BOM - 实现依赖版本的集中管理 -->
+            <!-- 导入 Spring Cloud BOM: 统一管理 Spring Cloud 相关依赖版本 -->
             <dependency>
-                <groupId>com.helian</groupId>
-                <artifactId>bom</artifactId>
-                <version>${revision}</version>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -87,10 +88,6 @@
                         <parameters>true</parameters>
                         <release>${java.version}</release>
                         <encoding>${project.build.sourceEncoding}</encoding>
-                        <compilerArgs>
-                            <arg>-Xlint:all</arg>
-                            <arg>-Werror</arg>
-                        </compilerArgs>
                     </configuration>
                 </plugin>
 
@@ -463,9 +460,9 @@
 
     <!-- 源码管理 - 指定代码仓库位置 -->
     <scm>
-        <url>https://github.com/helian-labs/maven-template-bom</url>
-        <connection>scm:git:git@github.com:helian-labs/maven-template-bom.git</connection>
-        <developerConnection>scm:git:git@github.com:helian-labs/maven-template-bom.git</developerConnection>
+        <url>https://github.com/helian-labs/spring-boot-template-mvc</url>
+        <connection>scm:git:git@github.com:helian-labs/spring-boot-template-mvc.git</connection>
+        <developerConnection>scm:git:git@github.com:helian-labs/spring-boot-template-mvc.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
