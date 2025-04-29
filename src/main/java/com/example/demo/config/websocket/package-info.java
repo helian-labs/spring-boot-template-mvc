@@ -1,9 +1,21 @@
 /**
  * WebSocket配置包
  *
- * <p>最佳实践： 1. WebSocket配置类应该放在config.websocket包下 2. WebSocket配置类应该使用@Configuration注解标记 3.
- * WebSocket配置类应该提供必要的注释说明 4. WebSocket配置类应该考虑连接管理问题 5. WebSocket配置类应该考虑消息发送问题 6.
- * WebSocket配置类应该考虑消息接收问题 7. WebSocket配置类应该考虑会话管理问题 8. WebSocket配置类应该考虑心跳检测问题 9.
- * WebSocket配置类应该考虑异常处理问题 10. WebSocket配置类应该考虑性能问题
+ * <p>职责：
+ * <ul>
+ *   <li>配置WebSocket端点</li>
+ *   <li>配置消息处理器</li>
+ *   <li>配置会话管理</li>
+ *   <li>配置心跳检测</li>
+ * </ul>
+ *
+ * <p>规范：
+ * <ul>
+ *   <li>配置类以WebSocketConfig结尾</li>
+ *   <li>使用@Configuration和@EnableWebSocket注解标注</li>
+ *   <li>WebSocket处理器应该实现WebSocketHandler接口</li>
+ *   <li>应该考虑连接超时和重连机制</li>
+ *   <li>应该考虑消息的序列化和反序列化</li>
+ * </ul>
  */
 package com.example.demo.config.websocket;

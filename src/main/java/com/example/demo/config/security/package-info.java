@@ -1,8 +1,24 @@
 /**
  * 安全配置包
  *
- * <p>最佳实践： 1. 安全配置类应该放在config.security包下 2. 安全配置类应该使用@Configuration注解标记 3. 安全配置类应该提供必要的注释说明 4.
- * 安全配置类应该考虑认证问题 5. 安全配置类应该考虑授权问题 6. 安全配置类应该考虑加密问题 7. 安全配置类应该考虑会话管理问题 8. 安全配置类应该考虑CSRF防护问题 9.
- * 安全配置类应该考虑XSS防护问题 10. 安全配置类应该考虑SQL注入防护问题
+ * <p>职责：
+ * <ul>
+ *   <li>配置认证机制</li>
+ *   <li>配置授权策略</li>
+ *   <li>配置加密算法</li>
+ *   <li>配置会话管理</li>
+ *   <li>配置安全防护</li>
+ * </ul>
+ *
+ * <p>规范：
+ * <ul>
+ *   <li>配置类以SecurityConfig结尾</li>
+ *   <li>使用@Configuration和@EnableWebSecurity注解标注</li>
+ *   <li>应该实现CSRF防护</li>
+ *   <li>应该实现XSS防护</li>
+ *   <li>应该实现SQL注入防护</li>
+ *   <li>应该使用安全的加密算法</li>
+ *   <li>应该实现会话超时机制</li>
+ * </ul>
  */
 package com.example.demo.config.security;

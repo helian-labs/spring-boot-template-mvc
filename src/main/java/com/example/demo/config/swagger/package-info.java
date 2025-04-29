@@ -1,9 +1,23 @@
 /**
- * Swagger配置包
+ * Swagger API文档配置包
  *
- * <p>最佳实践： 1. Swagger配置类应该放在config.swagger包下 2. Swagger配置类应该使用@Configuration注解标记 3.
- * Swagger配置类应该提供必要的注释说明 4. Swagger配置类应该考虑API文档问题 5. Swagger配置类应该考虑API分组问题 6. Swagger配置类应该考虑API版本问题
- * 7. Swagger配置类应该考虑API安全问题 8. Swagger配置类应该考虑API测试问题 9. Swagger配置类应该考虑API导出问题 10.
- * Swagger配置类应该考虑API维护问题
+ * <p>职责：
+ * <ul>
+ *   <li>配置Swagger/OpenAPI的基本信息（标题、描述、版本等）</li>
+ *   <li>启用或禁用Swagger UI</li>
+ *   <li>配置API分组和扫描路径</li>
+ *   <li>配置全局参数、响应消息等</li>
+ *   <li>集成安全认证（如JWT）到Swagger文档</li>
+ * </ul>
+ *
+ * <p>规范：
+ * <ul>
+ *   <li>Swagger配置类应使用@Configuration注解</li>
+ *   <li>API文档信息应准确、完整</li>
+ *   <li>根据需要进行API分组管理</li>
+ *   <li>考虑API版本控制的展示</li>
+ *   <li>确保API安全性配置在文档中正确反映</li>
+ *   <li>提供必要的注释说明配置项</li>
+ * </ul>
  */
 package com.example.demo.config.swagger;
